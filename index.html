@@ -1,69 +1,49 @@
-services li {
-            border-bottom: 1px solid #333;
-            padding: 10px 0;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .contact-btn {
-            display: block;
-            background: var(--white);
-            color: var(--black);
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 8px;
-            font-weight: bold;
-            margin: 12px 0;
-            font-size: 1.15rem;
-            transition: transform 0.15s ease, opacity 0.15s ease;
-        }
-
-        .contact-btn:hover {
-            transform: scale(0.98);
-            opacity: 0.9;
-        }
-
-        .whatsapp {
-            background: var(--green);
-            color: var(--white);
-        }
-
-        .footer-info {
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        a {
-            color: inherit;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revell Roofing | Clacton-on-Sea</title>
+    <style>
+        body { margin: 0; font-family: 'Helvetica', sans-serif; color: white; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1635424710928-0544e8512eea?q=80&w=2000'); background-size: cover; background-attachment: fixed; text-align: center; }
+        .content { padding: 40px 20px; max-width: 500px; margin: auto; }
+        h1 { color: #ff3b3b; font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .line { border-top: 2px solid white; margin: 10px 0 30px 0; }
+        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 20px; border-radius: 15px; margin-bottom: 20px; border-bottom: 3px solid #ff3b3b; }
+        .btn { display: block; background: white; color: black; padding: 16px; margin: 10px 0; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; }
+        .whatsapp { background: #25D366; color: white; }
+        .stars { color: #f1c40f; margin: 5px 0; font-size: 1.2rem; }
+        ul { list-style: none; padding: 0; line-height: 2; font-weight: bold; }
+        p { line-height: 1.6; opacity: 0.9; }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="logo-area">
-            <h1>REVELL<br>ROOFING</h1>
-            <div class="subtitle">ROOFING SPECIALISTS</div>
+    <div class="content">
+        <h1>REVELL ROOFING</h1>
+        <div class="line"></div>
+        
+        <div class="card">
+            <a href="tel:07881681124" class="btn">📞 CALL: 07881681124</a>
+            <a href="mailto:info@revellroofing.co.uk" class="btn">✉️ EMAIL US</a>
+            <a href="https://wa.me/447881681124" class="btn whatsapp">💬 WHATSAPP US</a>
         </div>
 
-        <ul class="services">
-            <li>Roof Repairs</li>
-            <li>New Roofs</li>
-            <li>Lead Work</li>
-            <li>Roof Inspections</li>
-            <li>Gutter Cleaning</li>
-            <li>Responsibly Priced</li>
-        </ul>
+        <div class="card">
+            <h3>OUR SERVICES</h3>
+            <ul>
+                <li>NEW ROOF INSTALLATIONS</li>
+                <li>FULL RE-ROOFS</li>
+                <li>ROOF REPAIRS</li>
+                <li>CHIMNEY REPAIRS</li>
+                <li>LEADWORK & VALLEYS</li>
+            </ul>
+        </div>
 
-        <a href="tel:07881681124" class="contact-btn">📞 CALL: 07881 681124</a>
-        <a href="mailto:revellroofing2020@gmail.com" class="contact-btn">✉️ EMAIL US</a>
-        <a href="https://wa.me/447881681124" class="contact-btn whatsapp">💬 WHATSAPP US</a>
-
-        <div class="footer-info">
-            ESSEX BASED (CLACTON-ON-SEA) • NO TIME WASTERS • FAST REPLY
+        <div class="card">
+            <h3>ABOUT US</h3>
+            <p>With over a decade of experience, we deliver top-quality roofing across Essex. Fully insured and trusted local experts.</p>
+            <div class="stars">★★★★★</div>
+            <p>"Paul and the lads did a brilliant job. Clean and professional."</p>
         </div>
     </div>
 </body>
