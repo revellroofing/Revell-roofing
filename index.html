@@ -1,50 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revell Roofing | Clacton-on-Sea</title>
-    <style>
-        body { margin: 0; font-family: 'Helvetica', sans-serif; color: white; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1635424710928-0544e8512eea?q=80&w=2000'); background-size: cover; background-attachment: fixed; text-align: center; }
-        .content { padding: 40px 20px; max-width: 500px; margin: auto; }
-        h1 { color: #ff3b3b; font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        .line { border-top: 2px solid white; margin: 10px 0 30px 0; }
-        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 20px; border-radius: 15px; margin-bottom: 20px; border-bottom: 3px solid #ff3b3b; }
-        .btn { display: block; background: white; color: black; padding: 16px; margin: 10px 0; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; }
-        .whatsapp { background: #25D366; color: white; }
-        .stars { color: #f1c40f; margin: 5px 0; font-size: 1.2rem; }
-        ul { list-style: none; padding: 0; line-height: 2; font-weight: bold; }
-        p { line-height: 1.6; opacity: 0.9; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revell Roofing | Clacton-on-Sea</title>
+<meta name="description" content="Revell Roofing: Trusted roofing specialists in Clacton-on-Sea & Essex. New roofs, full re-roofs, roof repairs, chimney work, leadwork, valleys, gutter cleaning & moss removal. Call or WhatsApp today!">
+<style>
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1635424710928-0544e8512eea?q=80&w=2000') center/cover no-repeat fixed;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.content {
+    max-width: 650px;
+    margin: auto;
+    padding: 50px 20px 180px; /* extra bottom padding for sticky bar */
+}
+
+h1 {
+    color: #ff3b3b;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.line { border-top: 2px solid white; margin: 10px 0 30px; }
+
+/* Card style */
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    padding: 25px 20px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ff3b3b;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    background: white;
+    color: black;
+    padding: 16px;
+    margin: 12px 0;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.15rem;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.btn:hover { opacity: 0.85; transform: scale(1.03); }
+
+.whatsapp { background: #25D366; color: white; }
+
+/* Services list */
+ul { list-style: none; padding: 0; font-weight: bold; line-height: 2; }
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 8px 0;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.03);
+}
+
+/* Scroll pulse animation */
+@keyframes scrollPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0px #ff9800; }
+    50% { transform: scale(1.05); box-shadow: 0 0 12px #ff9800, 0 0 24px #ff9800; }
+    100% { transform: scale(1); box-shadow: 0 0 0px #ff9800; }
+}
+
+/* Testimonials */
+.stars { color: #f1c40f; margin: 6px 0; font-size: 1.3rem; }
+p { opacity: 0.9; margin: 10px 0; }
+
+/* Sticky Bottom Bar */
+.sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 999;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.5);
+}
+
+.sticky-bar a {
+    flex: 1;
+    margin: 0 6px;
+    padding: 14px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: transform 0.2s, opacity 0.3s, box-shadow 0.3s;
+}
+
+.sticky-bar a:hover { opacity: 0.85; transform: scale(1.05); }
+
+.sticky-bar a.call { background: #ff3b3b; color: white; }
+.sticky-bar a.whatsapp { background: #25D366; color: white; }
+.sticky-bar a.roof-inspection {
+    background: #ff9800;
+    color: white;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 12px #ff9800, 0 0 24px #ff9800;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 12px #ff9800, 0 0 24px #ff9800; }
+    50% { transform: scale(1.05); box-shadow: 0 0 18px #ff9800, 0 0 36px #ff9800; }
+    100% { transform: scale(1); box-shadow: 0 0 12px #ff9800, 0 0 24px #ff9800; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    .btn { padding: 14px; font-size: 1rem; }
+    .sticky-bar a { font-size: 0.95rem; padding: 10px 0; }
+    .content { padding: 40px 15px 180px; }
+}
+</style>
 </head>
 <body>
-    <div class="content">
-        <h1>REVELL ROOFING</h1>
-        <div class="line"></div>
-        
-        <div class="card">
-            <a href="tel:07881681124" class="btn">📞 CALL: 07881681124</a>
-            <a href="mailto:info@revellroofing.co.uk" class="btn">✉️ EMAIL US</a>
-            <a href="https://wa.me/447881681124" class="btn whatsapp">💬 WHATSAPP US</a>
-        </div>
+<div class="content">
+    <h1>REVELL ROOFING</h1>
+    <div class="line"></div>
 
-        <div class="card">
-            <h3>OUR SERVICES</h3>
-            <ul>
-                <li>NEW ROOF INSTALLATIONS</li>
-                <li>FULL RE-ROOFS</li>
-                <li>ROOF REPAIRS</li>
-                <li>CHIMNEY REPAIRS</li>
-                <li>LEADWORK & VALLEYS</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>ABOUT US</h3>
-            <p>With over a decade of experience, we deliver top-quality roofing across Essex. Fully insured and trusted local experts.</p>
-            <div class="stars">★★★★★</div>
-            <p>"Paul and the lads did a brilliant job. Clean and professional."</p>
-        </div>
+    <!-- Contact Buttons -->
+    <div class="card">
+        <a href="tel:07881681124" class="btn">📞 CALL: 07881681124</a>
+        <a href="mailto:info@revellroofing.co.uk" class="btn">✉️ EMAIL US</a>
+        <a href="https://wa.me/447881681124" class="btn whatsapp">💬 WHATSAPP US</a>
     </div>
+
+    <!-- Services -->
+    <div class="card" id="services">
+        <h2>OUR SERVICES</h2>
+        <ul>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20NEW%20ROOF%20INSTALLATION">NEW ROOF INSTALLATIONS — from £1200</a></li>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20FULL%20RE-ROOF">FULL RE-ROOFS — from £1800</a></li>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20ROOF%20REPAIRS">ROOF REPAIRS — from £80</a></li>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20CHIMNEY%20REPAIRS">CHIMNEY REPAIRS — from £150</a></li>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20LEADWORK%20%26%20VALLEYS">LEADWORK & VALLEYS — from £250</a></li>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20GUTTER%20CLEANING">GUTTER CLEANING — from £70</a></li>
+            <li><a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20a%20quote%20for%20MOSS%20REMOVAL">MOSS REMOVAL — from £90</a></li>
+        </ul>
+    </div>
+
+    <!-- About & Testimonials -->
+    <div class="card">
+        <h2>ABOUT US</h2>
+        <p>With over a decade of experience, we deliver top-quality roofing across Essex. Fully insured and trusted local experts.</p>
+        <div class="stars">★★★★★</div>
+        <p>"Paul and the lads did a brilliant job. Clean and professional."</p>
+        <p>"Reliable, punctual, and excellent work. Highly recommend."</p>
+    </div>
+</div>
+
+<!-- Sticky Bottom Bar -->
+<div class="sticky-bar">
+    <a href="tel:07881681124" class="call">📞 CALL NOW</a>
+    <a href="https://wa.me/447881681124" class="whatsapp">💬 WHATSAPP</a>
+    <a href="https://wa.me/447881681124?text=Hi%20Revell%20Roofing,%20I’d%20like%20to%20book%20a%20roof%20inspection" class="roof-inspection">🏠 ROOF INSPECTION</a>
+</div>
+
+<script>
+// Scroll-triggered pulse on service list
+const services = document.querySelectorAll("#services a");
+let fired = false;
+
+window.addEventListener("scroll", () => {
+    const triggerPoint = window.innerHeight / 1.2;
+    services.forEach(link => {
+        const top = link.getBoundingClientRect().top;
+        if (top < triggerPoint && !fired) {
+            link.style.animation = "scrollPulse 1.5s ease";
+        }
+    });
+    fired = true; // only fire once per page load
+});
+</script>
 </body>
 </html>
